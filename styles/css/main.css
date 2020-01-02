@@ -1,0 +1,607 @@
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ------- Colors ------- */
+/* ------- Globals ------- */
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+/* ------- Medias ------- */
+@media screen and (max-width: 1199px) {
+  body .title {
+    margin: auto;
+    margin-top: -.3em;
+    margin-bottom: 2rem;
+  }
+  body .container {
+    min-width: 900px;
+    padding: 3rem 4rem;
+    min-height: 400px;
+  }
+  body .container .right-side {
+    margin-left: 30px;
+  }
+  body .container .advice {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body .title {
+    font-size: calc(5vw + 2rem);
+  }
+  body .container {
+    min-width: 600px;
+    padding: 3rem 2rem;
+    min-height: 400px;
+  }
+  body .container .all-tasks {
+    margin-right: 0;
+    width: 200px;
+  }
+  body .container .all-tasks input {
+    width: 160px;
+  }
+  body .container .all-tasks .task-list {
+    padding-top: 1.1rem;
+  }
+  body .container .right-side {
+    width: 300px;
+    margin-left: 0px;
+  }
+  body .container .right-side .todo-list .todo-header {
+    padding: 1.5rem;
+  }
+  body .container .right-side .todo-list .todo-body {
+    padding: 1.5rem;
+  }
+  body .container .right-side .todo-list .todo-body .tasks p {
+    width: 210px;
+  }
+  body .container .right-side .todo-list .todo-body .new-task-creator form input {
+    max-width: 225px;
+  }
+  body .container .advice {
+    margin-left: 50px;
+    max-width: 250px;
+  }
+  body .container .advice h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .title {
+    margin-bottom: 1.5rem;
+    font-size: calc(4vw + 2rem);
+  }
+  body .container {
+    min-width: 450px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0rem 2rem;
+  }
+  body .container .all-tasks {
+    padding-top: 20px;
+  }
+  body .container .all-tasks .task-list {
+    line-height: 1.5;
+    padding-top: 0.5rem;
+  }
+  body .container .all-tasks .task-list .list-name {
+    max-width: 150px;
+  }
+  body .container .all-tasks form {
+    padding-top: 0.5rem;
+  }
+  body .container .right-side {
+    padding: 20px 0px;
+    width: 350px;
+  }
+  body .container .right-side .todo-list .list-title {
+    max-width: 150px;
+    font-size: 25px;
+    margin-right: 1.7em;
+  }
+  body .container .right-side .todo-list .task-count {
+    font-size: 16px;
+  }
+  body .container .right-side .todo-list .todo-body {
+    padding: 1.5rem 2rem;
+  }
+  body .container .right-side .todo-list .todo-body .task {
+    margin-bottom: 20px;
+  }
+  body .container .right-side .todo-list .todo-body .task label {
+    font-size: 20px;
+  }
+  body .container .right-side .todo-list .todo-body .task label p {
+    width: 245px;
+  }
+  body .container .right-side .todo-list .todo-body .task:after {
+    bottom: -.2em;
+  }
+  body .container .right-side .todo-list .todo-body .new-task-creator form {
+    padding-top: 0.5rem;
+  }
+  body .container .right-side .todo-list .todo-body .new-task-creator form input {
+    margin-bottom: 0;
+  }
+  body .container .advice {
+    min-width: 310px;
+    margin-left: 0;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body .title {
+    font-size: calc(3vw + 2rem);
+    line-height: 32px;
+    margin-top: -.1rem;
+    margin-bottom: 1.2rem;
+  }
+  body .container {
+    max-width: 270px;
+    min-width: 260px;
+    padding: 0;
+    margin: auto;
+  }
+  body .container .all-tasks .task-list {
+    line-height: 1.4;
+  }
+  body .container .all-tasks .task-list .list-name {
+    font-size: 18px;
+  }
+  body .container .all-tasks form input {
+    width: 150px;
+  }
+  body .container .right-side {
+    width: 240px;
+  }
+  body .container .right-side .todo-list .todo-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 1rem;
+  }
+  body .container .right-side .todo-list .todo-header .list-title {
+    max-width: 190px;
+    font-size: 25px;
+    margin-right: 0;
+  }
+  body .container .right-side .todo-list .todo-header .task-count {
+    padding-top: 5px;
+    font-size: 14px;
+  }
+  body .container .right-side .todo-list .todo-body {
+    padding: 1rem;
+  }
+  body .container .right-side .todo-list .todo-body .task {
+    margin-bottom: 10px;
+  }
+  body .container .right-side .todo-list .todo-body .task label {
+    font-size: 17px;
+  }
+  body .container .right-side .todo-list .todo-body .task label p {
+    width: 175px;
+  }
+  body .container .right-side .todo-list .todo-body .new-task-creator form {
+    padding-top: 0;
+  }
+  body .container .right-side .todo-list .todo-body .new-task-creator form input {
+    width: 180px;
+  }
+  body .container .right-side .delete-stuff button {
+    font-size: 14px;
+  }
+  body .container .advice {
+    min-width: 250px;
+  }
+}
+
+body {
+  background-color: #4B4453;
+  color: #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title {
+  grid-area: header;
+  text-align: center;
+  font-size: calc(7vw + 2rem);
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  margin: -.3em 0 3rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 1100px;
+  min-height: 500px;
+  margin: auto;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+  padding: 3rem 6rem;
+  background: #B0A8B9;
+  margin-bottom: 40px;
+}
+
+.all-tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 2%;
+}
+
+.task-list {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  list-style: circle;
+  padding-left: 1.5em;
+  padding-top: 1.4rem;
+}
+
+.list-name {
+  max-width: 200px;
+  word-wrap: break-word;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.list-name:hover {
+  opacity: .7;
+}
+
+.list-name.active-list:hover {
+  opacity: .9;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1.2rem;
+}
+
+.btn {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.btn.create {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: .25em;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.btn.create:hover {
+  opacity: 0.7;
+}
+
+.btn.delete {
+  opacity: .7;
+  font-size: 1rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.btn.delete:hover {
+  color: #4B4453;
+}
+
+.new {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  padding: 0.25em;
+  -webkit-transition: border-bottom 50ms ease-in;
+  transition: border-bottom 50ms ease-in;
+}
+
+.new::-webkit-input-placeholder {
+  color: #f4f4f4;
+  opacity: 0.4;
+}
+
+.new:-ms-input-placeholder {
+  color: #f4f4f4;
+  opacity: 0.4;
+}
+
+.new::-ms-input-placeholder {
+  color: #f4f4f4;
+  opacity: 0.4;
+}
+
+.new::placeholder {
+  color: #f4f4f4;
+  opacity: 0.4;
+}
+
+.new:focus {
+  border-bottom-width: 2px;
+}
+
+.new:focus::-webkit-input-placeholder {
+  opacity: 0.2;
+}
+
+.new:focus:-ms-input-placeholder {
+  opacity: 0.2;
+}
+
+.new:focus::-ms-input-placeholder {
+  opacity: 0.2;
+}
+
+.new:focus::placeholder {
+  opacity: 0.2;
+}
+
+.new.list {
+  font-size: 1.1rem;
+  max-width: 200px;
+}
+
+.new.task {
+  margin-bottom: 0;
+}
+
+.new.task::-webkit-input-placeholder {
+  color: #333;
+}
+
+.new.task:-ms-input-placeholder {
+  color: #333;
+}
+
+.new.task::-ms-input-placeholder {
+  color: #333;
+}
+
+.new.task::placeholder {
+  color: #333;
+}
+
+.new-task-creator .create {
+  color: #4B4453;
+}
+
+.active-list {
+  font-weight: 700;
+}
+
+.right-side {
+  width: 400px;
+  margin-left: 60px;
+}
+
+.todo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2%;
+  background: #f4f4f4;
+  color: #333;
+  -webkit-box-shadow: 0 0 2px #f2f0f5;
+          box-shadow: 0 0 2px #f2f0f5;
+}
+
+.todo-header {
+  padding: 2rem;
+  background: #dbdbdb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list-title {
+  margin-right: 1em;
+  color: #4B4453;
+  width: 200px;
+  word-wrap: break-word;
+}
+
+.task-count {
+  font-size: 1rem;
+}
+
+.todo-body {
+  padding: 2rem;
+  position: relative;
+  background: #f2f0f5;
+}
+
+[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.task {
+  position: relative;
+  margin-bottom: 1.25em;
+}
+
+.task label {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.task label p {
+  width: 290px;
+  overflow: hidden;
+}
+
+.task label:after {
+  content: "";
+  position: absolute;
+  left: 1.4em;
+  right: 0;
+  height: 3px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+.task:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -.5em;
+  height: 1px;
+  background: currentColor;
+  opacity: .1;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-right: .75em;
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+.task:hover .custom-checkbox,
+[type="checkbox"]:focus + label .custom-checkbox {
+  color: #4B4453;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+[type="checkbox"]:checked + label .custom-checkbox {
+  background: #4B4453;
+  border-color: #4B4453;
+  -webkit-box-shadow: inset 0 0 0 2px white;
+          box-shadow: inset 0 0 0 2px white;
+}
+
+[type="checkbox"]:checked + label {
+  opacity: .5;
+}
+
+[type="checkbox"]:checked + label:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.delete-stuff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 0.5rem;
+  width: 100%;
+  color: #f4f4f4;
+}
+
+.advice {
+  max-width: 400px;
+  z-index: 12;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: .1;
+  margin-left: 60px;
+  padding-top: 30px;
+}
+/*# sourceMappingURL=main.css.map */

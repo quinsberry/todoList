@@ -1,0 +1,45 @@
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ------- Colors ------- */
+$primary-clr: #4B4453;
+$light-color: #f4f4f4;
+$dark-clr: #333;
+// $warning-clr: rgb(99, 36, 36);
+$warning-clr: #4B4453;
+$bg-clr: #4B4453;
+// $container-clr: rgb(54, 112, 199);
+$container-clr: #B0A8B9;
+$todo-clr: #f2f0f5;
+$todo-header-clr: #dbdbdb;
+
+/* ------- Globals ------- */
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+/* ------- Medias ------- */
+@mixin media-xs {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+@mixin media-sm {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin media-md {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin media-lg {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}

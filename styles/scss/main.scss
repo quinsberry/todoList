@@ -1,0 +1,276 @@
+@import 'config';
+@import 'media';
+
+body {
+  background-color: $bg-clr;
+  color: $light-color;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.title {
+  grid-area: header;
+  text-align: center;
+  font-size: calc(7vw + 2rem);
+  font-weight: 900;
+  color: rgba(0,0,0,0.1);
+  letter-spacing: 2px;
+  margin: -.3em 0 3rem;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 1100px;
+  min-height: 500px;
+  margin: auto;
+  box-shadow: 0 0 5px white;
+  padding: 3rem 6rem;
+  background: $container-clr;
+  margin-bottom: 40px;
+}
+
+.all-tasks {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2%;
+}
+
+.task-list {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  list-style: circle;
+  padding-left: 1.5em;
+  padding-top: 1.4rem;
+}
+
+.list-name {
+  max-width: 200px;
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: .2s ;
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.list-name.active-list {
+  &:hover {
+    opacity: .9;
+  }
+}
+
+form {
+  display: flex;
+  padding-top: 1.2rem;
+}
+
+.btn {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.btn.create {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: .25em;
+  transition: .2s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.btn.delete {
+  opacity: .7;
+  font-size: 1rem;
+  transition: .2s;
+  &:hover {
+    color: $warning-clr;
+  }
+}
+
+.new {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+  order: 2;
+  padding: 0.25em;
+
+  transition: border-bottom 50ms ease-in;
+  &::placeholder {
+    color: $light-color;
+    opacity: 0.4;
+  }
+  &:focus {
+    border-bottom-width: 2px;
+    &::placeholder {
+      opacity: 0.2;
+    }
+  }
+}
+
+.new.list {
+  font-size: 1.1rem;
+  max-width: 200px;
+}
+
+.new.task {
+  margin-bottom: 0;
+  &::placeholder {
+    color: $dark-clr;
+  }
+}
+
+.new-task-creator {
+  .create {
+    color: $primary-clr;
+  }
+}
+
+.active-list {
+  font-weight: 700;
+}
+
+.right-side {
+  width: 400px;
+  margin-left: 60px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  background: $light-color;
+  color: $dark-clr;
+  box-shadow: 0 0 2px $todo-clr;
+}
+
+.todo-header {
+  padding: 2rem;
+  background: $todo-header-clr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-title {
+  margin-right: 1em;
+  color: $primary-clr;
+  width: 200px;
+  word-wrap: break-word;
+}
+
+.task-count {
+  font-size: 1rem;
+}
+
+.todo-body {
+  padding: 2rem;
+  position: relative;
+  background: $todo-clr;
+}
+
+[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.task {
+  position: relative;
+  margin-bottom: 1.25em;
+  // word-wrap: break-word;
+  label {
+    // max-width: 350px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    p {
+      width: 290px;
+      overflow: hidden;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 1.4em;
+      right: 0;
+      height: 3px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .2s ease-in-out;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -.5em;
+    height: 1px;
+    background: currentColor;
+    opacity: .1;
+  }
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-right: .75em;
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: transform .2s ease-in-out;
+}
+
+.task:hover .custom-checkbox,
+[type="checkbox"]:focus + label .custom-checkbox {
+  color: $primary-clr;
+  transform: scale(1.2);
+}
+
+[type="checkbox"]:checked + label .custom-checkbox {
+  background: $primary-clr;
+  border-color: $primary-clr;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+[type="checkbox"]:checked + label {
+  opacity: .5;
+}
+
+[type="checkbox"]:checked + label:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.delete-stuff {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 0.5rem;
+  width: 100%;
+  color: $light-color;
+}
+
+.advice {
+  max-width: 400px;
+  z-index: 12;
+  background: transparent;
+  display: flex;
+  opacity: .1;
+  margin-left: 60px;
+  padding-top: 30px;
+}
+
+

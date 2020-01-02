@@ -1,0 +1,225 @@
+@include media-lg {
+  body {
+    .title {
+      margin: auto;
+      margin-top: -.3em;
+      margin-bottom: 2rem;
+    }
+    .container {
+      min-width: 900px;
+      padding: 3rem 4rem;
+      min-height: 400px;
+      .right-side {
+        margin-left: 30px;
+      }
+      .advice {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+@include media-md {
+  body {
+    .title {
+      font-size: calc(5vw + 2rem);
+    }
+    .container {
+      min-width: 600px;
+      padding: 3rem 2rem;
+      min-height: 400px;
+      .all-tasks {
+        margin-right: 0;
+        width: 200px;
+        input {
+          width: 160px;
+        }
+        .task-list {
+          padding-top: 1.1rem;
+        }
+      }
+      .right-side {
+        width: 300px;
+        margin-left: 0px;
+        .todo-list {
+          .todo-header {
+            padding: 1.5rem;
+          }
+          .todo-body {
+            padding: 1.5rem;
+            .tasks {
+              p {
+                width: 210px;
+              }
+            }
+            .new-task-creator {
+              form {
+                input {
+                  max-width: 225px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .advice {
+        margin-left: 50px;
+        max-width: 250px;
+        h1 {
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+@include media-sm {
+  body {
+    .title {
+      margin-bottom: 1.5rem;
+      font-size: calc(4vw + 2rem);
+    }
+    .container {
+      min-width: 450px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0rem 2rem;
+      .all-tasks {
+        padding-top: 20px;
+        .task-list {
+          line-height: 1.5;
+          padding-top: 0.5rem;
+          .list-name {
+            max-width: 150px;
+          }
+        }
+        form {
+          padding-top: 0.5rem;
+        }
+      }
+      .right-side {
+        padding: 20px 0px;
+        width: 350px;
+        .todo-list {
+          .list-title {
+            max-width: 150px;
+            font-size: 25px;
+            margin-right: 1.7em;
+          }
+          .task-count {
+            font-size: 16px;
+          }
+          .todo-body {
+            padding: 1.5rem 2rem;
+            .task {
+              margin-bottom: 20px;
+              label {
+                font-size: 20px;
+                p {
+                  width: 245px;
+                }
+              }
+              &:after {
+                bottom: -.2em;
+              }
+            }
+            .new-task-creator {
+              form {
+                padding-top: 0.5rem;
+                input {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .advice {
+        min-width: 310px;
+        margin-left: 0;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 50px; 
+      }
+    }
+  }
+}
+@include media-xs {
+  body {
+    .title {
+      font-size: calc(3vw + 2rem);
+      line-height: 32px;
+      margin-top: -.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .container {
+      max-width: 270px;
+      min-width: 260px;
+      padding: 0;
+      margin: auto;
+      .all-tasks {
+        .task-list {
+          line-height: 1.4;
+          .list-name {
+            font-size: 18px;
+          }
+        }
+        form {
+          input {
+            width: 150px;
+          }
+        }
+      }
+      .right-side {
+        width: 240px;
+        .todo-list {
+          .todo-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 1rem;
+            .list-title {
+              max-width: 190px;
+              font-size: 25px;
+              margin-right: 0;
+            }
+            .task-count {
+              padding-top: 5px;
+              font-size: 14px;
+            }
+          }
+          .todo-body {
+            padding: 1rem;
+            .task {
+              margin-bottom: 10px;
+              label {
+                font-size: 17px;
+                p {
+                  width: 175px;
+                }
+              }
+            }
+            .new-task-creator {
+              form {
+                padding-top: 0;
+                input {
+                  width: 180px;
+                }
+              }
+            }
+          }
+        }
+        .delete-stuff {
+          button {
+            font-size: 14px;
+          }
+        }
+      }
+      .advice {
+        min-width: 250px;
+      }
+    }
+  }
+}
